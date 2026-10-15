@@ -40,6 +40,10 @@ abstract class User implements Serializable {
         return raw != null && raw.equals(password);
     }
 
+    String getPasswordForStorage() {
+        return password;
+    }
+
     public void setPassword(String newPassword) {
         this.password = newPassword;
     }
